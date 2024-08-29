@@ -1,16 +1,19 @@
 import Header from "./components/Header";
+import Projects from "./components/Projects";
+import Hero from "./components/Hero";
+import Github from "./components/Github"
+import Resume from "./components/Resume";
+import Contact from "./components/Contact"
 
 export default function App() {
   return (
-    <h1 className="text-3xl font-bold p-2">
+    <h1 className="p-2">
       <Header/>
-      {/* hero
-      skills
-      projects
-      resume
-      contact
-      footer
-       */}
+      {/* <Hero/>  */}
+       {/* <Projects/> */}
+      {/* <Github/> */}
+      {/* <Resume/> */}
+      <Contact/> 
     </h1>
   )
 }
