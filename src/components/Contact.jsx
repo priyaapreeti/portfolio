@@ -1,14 +1,14 @@
 import React from 'react'
-
+import { TwitterLogo,LinkedinLogo,GithubLogo, At } from 'phosphor-react';
 
 const Contact = () => {
   return (
-    <div className='p-2'>
-      <h1>Contact me now:</h1>
-      <a href="https://www.linkedin.com/in/preetiipriya/" target='_blank'>Linkedin</a>
-      <a href="https://github.com/priyaapreeti" target='_blank'>github</a>
-      <a href="https://x.com/preetistfu" target='_blank'>twitter</a>
-      <a href="mailto:preetiipriyaa@gmail.com" target='_blank'>mail</a>
+    <div className='p-2 flex'>
+      <h1 className='p-2'>Contact me now:</h1>
+      <a className="hover:text-blue-700" href="https://www.linkedin.com/in/preetiipriya/" target='_blank'><LinkedinLogo size={32} /></a>
+      <a className="hover:text-blue-700" href="https://github.com/priyaapreeti" target='_blank'><GithubLogo size={32} /></a>
+      <a className="hover:text-blue-700" href="https://x.com/preetistfu" target='_blank'><TwitterLogo size={32} /></a>
+      <a className="hover:text-blue-700" href="mailto:preetiipriyaa@gmail.com" target='_blank'><At size={32} /></a>
     </div>
   )
 }
