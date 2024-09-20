@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 *{
-    background-color: black;
-    color: white;
+    /* background-color: black;
+    color: white; */
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+    /* width: 90%; */
+    /* justify-content: center; */
 }
