@@ -1,0 +1,81 @@
+import { ArrowUpRight, DotsThreeOutlineVertical, Moon, X } from "phosphor-react";
+import React, { useRef } from "react";
+import { assets } from "../../../assets/assets.js";
+
+const Navbar = () => {
+  const sideMenuRef= useRef();
+  const openMenu= ()=>{
+    sideMenuRef.current.style.transform = 'translateX(-16rem)'
+  }
+  const closeMenu= ()=>{
+    sideMenuRef.current.style.transform = 'translateX(16rem)'
+  }
+  return (
+    <>
+      <div className=" fixed top-0 right-0">
+        <img className="w-full" src={assets.header_bg_color} alt="" />
+      </div>
+      <nav className="w-full fixed flex justify-between px-5 lg:px-8 xl:px[8%] py-4 z-50 ">
+        <a href="#top">
+          <div className="w-28 cursor-pointer mr-14 text-3xl font-bold">
+            Preeti <span className="text-red-600">.</span>
+          </div>
+        </a>
+        <ul className="hidden md:flex items-center gap-6 lg:gap-8rounded-full px-12 py-3 bg-white shadow-sm bg-opacity-50">
+          <li className="font-ovo" href="#top">
+            Home
+          </li>
+          <li className="font-ovo" href="#about">
+            About me
+          </li>
+          <li className="font-ovo" href="#exp">
+            Experience
+          </li>
+          <li className="font-ovo" href="#work">
+            Work
+          </li>
+          <li className="font-ovo" href="#contact">
+            Contact Me
+          </li>
+        </ul>
+        <div className=" flex items-center gap-4">
+          <button className="cursor-pointer">
+            <Moon className="w-6" size={20} />
+          </button>
+          <a
+            href="#contact"
+            className="hidden lg:flex items-center gap-3 px-10 py-2.5 border border-gray-500 rounded-full ml-4"
+          >
+            Contact <ArrowUpRight size={20} />
+          </a>
+          <button className=" block md:hidden cursor-pointer" onClick={openMenu}>
+            <DotsThreeOutlineVertical size={20} />
+          </button>
+        </div>
+        {/* mobile menu */}
+        <ul className="md:hidden flex flex-col gap-4 py-20 px-10 fixed top-0 bottom-0 w-64 z-50 h-screen bg-rose-50 transition duration-500 -right-64" ref={sideMenuRef} >
+          <div className="absolute right-6 top-6" onClick={closeMenu}>
+            <X className="w-5 cursor-pointer" size={20} />
+          </div>
+           <li className="font-Ovo" href="#top">
+            Home
+          </li>
+          <li className="font-Ovo" href="#about">
+            About me
+          </li>
+          <li className="font-Ovo" href="#exp">
+            Experience
+          </li>
+          <li className="font-Ovo" href="#work">
+            Work
+          </li>
+          <li className="font-Ovo" href="#contact">
+            Contact Me
+          </li>
+        </ul>
+      </nav>
+    </>
+  );
+};
+
+export default Navbar;
