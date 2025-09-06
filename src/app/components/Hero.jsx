@@ -21,8 +21,6 @@ const Hero = () => {
       <p className="max-w-2xl mx-auto ">
         I’m a frontend-focused web developer with nearly 3 years of professional
         experience building responsive, user-friendly applications. Over time,
-        I’ve expanded into full-stack development with the MERN stack, giving me
-        end-to-end expertise in designing and delivering modern web solutions.
       </p>
       <div className="flex flex-col sm:flex-row items-center gap-4 mt-4 ">
         <a

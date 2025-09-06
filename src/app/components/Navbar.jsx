@@ -1,15 +1,20 @@
-import { ArrowUpRight, DotsThreeOutlineVertical, Moon, X } from "phosphor-react";
+import {
+  ArrowUpRight,
+  DotsThreeOutlineVertical,
+  Moon,
+  X,
+} from "phosphor-react";
 import React, { useRef } from "react";
 import { assets } from "../../../assets/assets.js";
 
 const Navbar = () => {
-  const sideMenuRef= useRef();
-  const openMenu= ()=>{
-    sideMenuRef.current.style.transform = 'translateX(-16rem)'
-  }
-  const closeMenu= ()=>{
-    sideMenuRef.current.style.transform = 'translateX(16rem)'
-  }
+  const sideMenuRef = useRef();
+  const openMenu = () => {
+    sideMenuRef.current.style.transform = "translateX(-16rem)";
+  };
+  const closeMenu = () => {
+    sideMenuRef.current.style.transform = "translateX(16rem)";
+  };
   return (
     <>
       <div className=" fixed top-0 right-0">
@@ -22,20 +27,20 @@ const Navbar = () => {
           </div>
         </a>
         <ul className="hidden md:flex items-center gap-6 lg:gap-8rounded-full px-12 py-3 bg-white shadow-sm bg-opacity-50">
-          <li className="font-ovo" href="#top">
-            Home
+          <li className="font-ovo">
+            <a href="#top">Home</a>
           </li>
-          <li className="font-ovo" href="#about">
-            About me
+          <li className="font-ovo">
+            <a href="#about">About me</a>
           </li>
-          <li className="font-ovo" href="#exp">
-            Experience
+          <li className="font-ovo">
+            <a href="#exp">Experience</a>
           </li>
-          <li className="font-ovo" href="#work">
-            Work
+          <li className="font-ovo">
+            <a href="#work">Work</a>
           </li>
-          <li className="font-ovo" href="#contact">
-            Contact Me
+          <li className="font-ovo">
+            <a href="#contact">Contact Me</a>
           </li>
         </ul>
         <div className=" flex items-center gap-4">
@@ -48,29 +53,35 @@ const Navbar = () => {
           >
             Contact <ArrowUpRight size={20} />
           </a>
-          <button className=" block md:hidden cursor-pointer" onClick={openMenu}>
+          <button
+            className=" block md:hidden cursor-pointer"
+            onClick={openMenu}
+          >
             <DotsThreeOutlineVertical size={20} />
           </button>
         </div>
         {/* mobile menu */}
-        <ul className="md:hidden flex flex-col gap-4 py-20 px-10 fixed top-0 bottom-0 w-64 z-50 h-screen bg-rose-50 transition duration-500 -right-64" ref={sideMenuRef} >
+        <ul
+          className="md:hidden flex flex-col gap-4 py-20 px-10 fixed top-0 bottom-0 w-64 z-50 h-screen bg-rose-50 transition duration-500 -right-64"
+          ref={sideMenuRef}
+        >
           <div className="absolute right-6 top-6" onClick={closeMenu}>
             <X className="w-5 cursor-pointer" size={20} />
           </div>
-           <li className="font-Ovo" href="#top">
-            Home
+            <li className="font-ovo">
+            <a href="#top">Home</a>
           </li>
-          <li className="font-Ovo" href="#about">
-            About me
+          <li className="font-ovo">
+            <a href="#about">About me</a>
           </li>
-          <li className="font-Ovo" href="#exp">
-            Experience
+          <li className="font-ovo">
+            <a href="#exp">Experience</a>
           </li>
-          <li className="font-Ovo" href="#work">
-            Work
+          <li className="font-ovo">
+            <a href="#work">Work</a>
           </li>
-          <li className="font-Ovo" href="#contact">
-            Contact Me
+          <li className="font-ovo">
+            <a href="#contact">Contact Me</a>
           </li>
         </ul>
       </nav>
