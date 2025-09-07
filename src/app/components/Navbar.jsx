@@ -4,7 +4,7 @@ import {
   Moon,
   X,
 } from "phosphor-react";
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { assets } from "../../../assets/assets.js";
 
 const Navbar = () => {
@@ -15,12 +15,22 @@ const Navbar = () => {
   const closeMenu = () => {
     sideMenuRef.current.style.transform = "translateX(16rem)";
   };
+  const [scroll, setScroll] = useState(false);
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (scrollY > 50) {
+        setScroll(true);
+      } else {
+        setScroll(false);
+      }
+    });
+  }, []);
   return (
     <>
       <div className=" fixed top-0 right-0">
         <img className="w-full" src={assets.header_bg_color} alt="" />
       </div>
-      <nav className="w-full fixed flex justify-between px-5 lg:px-8 xl:px[8%] py-4 z-50 ">
+      <nav className={`w-full fixed flex justify-between px-5 lg:px-8 xl:px[8%] py-4 z-50 ${scroll? "bg-white bh-opacity-50 backdrop": ""} `}>
         <a href="#top">
           <div className="w-28 cursor-pointer mr-14 text-3xl font-bold">
             Preeti <span className="text-red-600">.</span>
@@ -68,7 +78,7 @@ const Navbar = () => {
           <div className="absolute right-6 top-6" onClick={closeMenu}>
             <X className="w-5 cursor-pointer" size={20} />
           </div>
-            <li className="font-ovo">
+          <li className="font-ovo">
             <a href="#top">Home</a>
           </li>
           <li className="font-ovo">

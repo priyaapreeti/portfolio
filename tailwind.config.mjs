@@ -1,4 +1,4 @@
-// tailwind.config.js
+
 
 export default {
   content: [
@@ -9,7 +9,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        lighthover: 'fcf4ff',
+        lightHover: 'fcf4ff',
         darkHover: '2a004a',
         darkTheme: '11001F'
       },

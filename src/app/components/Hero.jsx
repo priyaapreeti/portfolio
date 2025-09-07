@@ -25,13 +25,13 @@ const Hero = () => {
       <div className="flex flex-col sm:flex-row items-center gap-4 mt-4 ">
         <a
           href="#contact"
-          className="px-10 py-3 flex space-between border rounded-full border-gray-500 items-center"
+          className="px-10 py-3 flex border rounded-full border-gray-500 items-center hover:scale-105"
         >
           Contact me <ArrowUpRight size={20} />{" "}
         </a>
         <a
           href="/preeti_priya.pdf"
-          className="px-10 py-3 border rounded-full flex border-gray-500 items-center"
+          className="px-10 py-3 border rounded-full flex border-gray-500 items-center hover:scale-105"
           download
         >
           Resume <ArrowDown size={20} />{" "}
