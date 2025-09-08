@@ -30,13 +30,13 @@ const Navbar = () => {
       <div className=" fixed top-0 right-0">
         <img className="w-full" src={assets.header_bg_color} alt="" />
       </div>
-      <nav className={`w-full fixed flex justify-between px-5 lg:px-8 xl:px[8%] py-4 z-50 ${scroll? "bg-white bh-opacity-50 backdrop": ""} `}>
+      <nav className={`w-full fixed flex justify-between px-5 lg:px-8 xl:px[8%] py-4 z-50 ${scroll? "bg-white bg-opacity-50 backdrop-blur-lg shadow-sm": ""} `}>
         <a href="#top">
           <div className="w-28 cursor-pointer mr-14 text-3xl font-bold">
             Preeti <span className="text-red-600">.</span>
           </div>
         </a>
-        <ul className="hidden md:flex items-center gap-6 lg:gap-8rounded-full px-12 py-3 bg-white shadow-sm bg-opacity-50">
+        <ul className={`hidden md:flex items-center gap-6 lg:gap-8rounded-full px-12 py-3 ${!scroll? "bg-white shadow-sm bg-opacity-50" : ""}`}>
           <li className="font-ovo">
             <a href="#top">Home</a>
           </li>
@@ -78,19 +78,19 @@ const Navbar = () => {
           <div className="absolute right-6 top-6" onClick={closeMenu}>
             <X className="w-5 cursor-pointer" size={20} />
           </div>
-          <li className="font-ovo">
+          <li className="font-ovo" onClick={closeMenu}>
             <a href="#top">Home</a>
           </li>
-          <li className="font-ovo">
+          <li className="font-ovo" onClick={closeMenu}>
             <a href="#about">About me</a>
           </li>
-          <li className="font-ovo">
+          <li className="font-ovo" onClick={closeMenu}>
             <a href="#exp">Experience</a>
           </li>
-          <li className="font-ovo">
+          <li className="font-ovo" onClick={closeMenu}>
             <a href="#work">Work</a>
           </li>
-          <li className="font-ovo">
+          <li className="font-ovo" onClick={closeMenu}>
             <a href="#contact">Contact Me</a>
           </li>
         </ul>

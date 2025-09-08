@@ -16,7 +16,7 @@ const Hero = () => {
         Hey, I am Preeti Priya<Image src={assets.hand_icon} alt="" />{" "}
       </h3>
       <h1 className="text-xl sm:text-6xl lg:text:[66px] max-auto ">
-        Software Developer based in Bangalore.
+        Software Developer based out of India.
       </h1>
       <p className="max-w-2xl mx-auto ">
         I’m a frontend-focused web developer with nearly 3 years of professional

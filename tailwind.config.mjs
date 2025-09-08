@@ -1,5 +1,3 @@
-
-
 export default {
   content: [
     "./app/**/*.{js,ts,jsx,tsx}",
@@ -16,8 +14,15 @@ export default {
       fontFamily: {
         Outfit: ['Outfit', 'san-serif'],
         Ovo: ['Ovo', 'serif']
-      }
+      },
+      boxshadow: {
+        'black': '4px 4px 0 #000',
+        "white" : '4px 4px 0 #fff',
+    },
+    gridTemplateColumns: {
+      'auto': 'repeat(auto-fit, minmax(240px, 1fr))',
     },
   },
   plugins: [],
-};
+  }
+}
