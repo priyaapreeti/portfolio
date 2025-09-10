@@ -7,7 +7,7 @@ import {
 import React, { useEffect, useRef, useState } from "react";
 import { assets } from "../../../assets/assets.js";
 
-const Navbar = () => {
+const Navbar = ({setIsDarkMode, isDarkMode}) => {
   const sideMenuRef = useRef();
   const openMenu = () => {
     sideMenuRef.current.style.transform = "translateX(-16rem)";
@@ -55,7 +55,7 @@ const Navbar = () => {
         </ul>
         <div className=" flex items-center gap-4">
           <button className="cursor-pointer">
-            <Moon className="w-6" size={20} />
+            <Moon className="w-6" size={20} onClick={()=>setIsDarkMode(!isDarkMode)}/>
           </button>
           <a
             href="#contact"

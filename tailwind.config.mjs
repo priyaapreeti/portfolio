@@ -23,6 +23,7 @@ export default {
       'auto': 'repeat(auto-fit, minmax(240px, 1fr))',
     },
   },
+  darkMode: "class",
   plugins: [],
   }
 }
