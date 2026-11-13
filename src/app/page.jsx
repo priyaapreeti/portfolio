@@ -1,9 +1,9 @@
 'use client'
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import About from "./components/About"
-import Contact from './components/Contact'
-import Footer from './components/Footer'
+import Navbar from "../components/layout/Navbar";
+import Hero from "../components/Hero";
+import About from "./about/About"
+import Contact from './contact/Contact'
+import Footer from '../components/layout/Footer'
 import { useEffect, useState } from "react";
 
 export default function Home() {

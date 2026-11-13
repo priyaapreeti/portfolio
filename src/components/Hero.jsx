@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { assets } from "../../../assets/assets.js";
+import { assets } from '../../assets/assets.js';
 import { ArrowDown, ArrowUpRight } from "phosphor-react";
 
 const Hero = () => {
@@ -19,7 +19,7 @@ const Hero = () => {
         Software Developer based out of India.
       </h1>
       <p className="max-w-2xl mx-auto ">
-        I’m a frontend-focused web developer with nearly 3 years of professional
+        I’m a frontend-focused web developer with nearly 4 years of professional
         experience building responsive, user-friendly applications. Over time,
       </p>
       <div className="flex flex-col sm:flex-row items-center gap-4 mt-4 ">
