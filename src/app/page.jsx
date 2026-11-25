@@ -1,31 +1,15 @@
-'use client'
-import Navbar from "../components/layout/Navbar";
-import Hero from "../components/Hero";
-import About from "./about/About"
-import Contact from './contact/Contact'
-import Footer from '../components/layout/Footer'
-import { useEffect, useState } from "react";
+import Hero from "@/components/sections/Hero";
+import About from "@/components/sections/About";
+import Experience from "@/components/sections/Experience";
+import Contact from "@/components/sections/Contact"
 
 export default function Home() {
-  const [isDarkMode, setIsDarkMode] = useState(false);
-  console.log(isDarkMode)
-  useEffect(() => {
-    if (isDarkMode) {
-      document.documentElement.classList.add("dark");
-      localStorage.setItem("theme", "dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-      localStorage.setItem("theme", "");
-    }
-  }, [isDarkMode]);
   return (
-    <>
-    <Navbar setIsDarkMode={setIsDarkMode} isDarkMode={isDarkMode}/>
-    <Hero/>
-    <About/>
-    {/* <Work/> */}
-    <Contact/>
-    <Footer/>
-    </>
+    <div className="max-w-4xl mx-auto px-5 lg:px-6 pt-28 pb-20 space-y-20">
+      <Hero />
+      <About />
+      <Experience />
+      <Contact/>
+    </div>
   );
 }
